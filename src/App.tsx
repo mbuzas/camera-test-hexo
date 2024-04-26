@@ -1,25 +1,33 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { useCallback, useState } from "react";
 import "./App.css";
 import Webcam from "react-webcam";
 
+const FACING_MODE_USER = "user";
+const FACING_MODE_ENVIRONMENT = "environment";
+
+const videoConstraints = {
+  facingMode: FACING_MODE_USER,
+};
+
 function App() {
-  // const [source, setSource] = useState("");
-  // const handleCapture = (target: any) => {
-  //   if (target.files) {
-  //     if (target.files.length !== 0) {
-  //       const file = target.files[0];
-  //       const newUrl = URL.createObjectURL(file);
-  //       setSource(newUrl);
-  //     }
-  //   }
-  // };
+  const [facingMode, setFacingMode] = useState(FACING_MODE_USER);
+  const handleClick = useCallback(() => {
+    setFacingMode((prevState) =>
+      prevState === FACING_MODE_USER
+        ? FACING_MODE_ENVIRONMENT
+        : FACING_MODE_USER
+    );
+  }, []);
   return (
     <>
       WASUUPPPPPP
+      <button onClick={handleClick}>Switch camera</button>
       <Webcam
         videoConstraints={{
-          facingMode: "environment",
+          ...videoConstraints,
+          facingMode,
         }}
         width={300}
         height={400}
