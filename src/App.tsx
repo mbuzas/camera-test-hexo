@@ -26,12 +26,12 @@ function App() {
         height={700}
         screenshotFormat="image/jpeg"
       />
-      {/* <input
+      <input
         accept="image/*"
         id="icon-button-file"
         type="file"
         capture="environment"
-      /> */}
+      />
     </>
   );
 }
