@@ -18,11 +18,11 @@ function App() {
     <>
       WASUUPPPPPP
       <Webcam
-        // videoConstraints={{
-        //   facingMode: {
-        //     exact:",
-        //   },
-        // }}
+        videoConstraints={{
+          facingMode: {
+            exact: "environment",
+          },
+        }}
         width={300}
         height={400}
         screenshotFormat="image/jpeg"
