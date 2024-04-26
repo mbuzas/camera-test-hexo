@@ -19,9 +19,7 @@ function App() {
       WASUUPPPPPP
       <Webcam
         videoConstraints={{
-          facingMode: {
-            exact: "environment",
-          },
+          facingMode: "environment",
         }}
         width={300}
         height={400}
