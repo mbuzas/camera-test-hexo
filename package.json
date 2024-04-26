@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mbuzas.github.io/camera-test-hexo/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
