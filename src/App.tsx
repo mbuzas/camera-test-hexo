@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       WASUUPPPPPP
-      {/* <Webcam
+      <Webcam
         // videoConstraints={{
         //   facingMode: {
         //     exact:",
@@ -26,13 +26,13 @@ function App() {
         width={300}
         height={400}
         screenshotFormat="image/jpeg"
-      /> */}
-      {/* <input
+      />
+      <input
         accept="image/*"
         id="icon-button-file"
         type="file"
         capture="environment"
-      /> */}
+      />
     </>
   );
 }
